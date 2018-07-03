@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="TargetFile" Type="System.String" Scope="User">
-      <Value Profile="(Default)">..\src\PerformanceTest\kokoro.txt</Value>
+      <Value Profile="(Default)">..\..\src\PerformanceTest\kokoro.txt</Value>
     </Setting>
     <Setting Name="TargetEncoding" Type="System.String" Scope="User">
       <Value Profile="(Default)">UTF-8</Value>
