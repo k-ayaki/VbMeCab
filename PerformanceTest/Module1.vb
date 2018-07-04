@@ -15,7 +15,7 @@ Module Module1
         Console.WriteLine("Press Enter key to start.")
         Console.ReadLine()
 
-        Console.WriteLine(vbTab + vbTab + "ProcessTime" + vbTab + "tTotalMemory")
+        Console.WriteLine(vbTab + vbTab + vbTab + "ProcessTime" + vbTab + "TotalMemory")
 
         '解析準備処理
         GC.Collect()
@@ -107,10 +107,11 @@ Module Module1
                 charCount += line.Length
                 lineCount += 1
                 Dim node As MeCabNode = tagger.ParseToNode(line)
+                node = node._Next
                 Do
-                    node = node._Next
-                    If node Is Nothing Then Exit Do
+                    If node._Next Is Nothing Then Exit Do
                     wordCount += 1
+                    node = node._Next
                 Loop
             Loop
 
